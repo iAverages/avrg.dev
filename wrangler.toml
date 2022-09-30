@@ -1,0 +1,3 @@
+name = "avrg-dev"
+main = "src/index.ts"
+compatibility_date = "2022-09-30"
