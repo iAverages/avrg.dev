@@ -1,3 +1,9 @@
 name = "avrg-dev"
 main = "src/index.ts"
 compatibility_date = "2022-09-30"
+
+[vars]
+B2URL = ""
+B2BUCKET = ""
+PATH_PREFIX = ""
+REDIRECT_URL = ""
