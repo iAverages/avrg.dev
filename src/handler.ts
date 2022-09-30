@@ -1,5 +1,4 @@
 import { Env } from ".";
-import bodyStatus from "./helpers/bodyStatus";
 import { formatHeaders } from "./helpers/headers";
 
 export default async (request: Request, env: Env, ctx: ExecutionContext) => {
@@ -9,12 +8,12 @@ export default async (request: Request, env: Env, ctx: ExecutionContext) => {
     if (!response) {
         console.log(`${env.B2URL}/file/${env.B2BUCKET}${env.PATH_PREFIX}${url.pathname}`);
         response = await fetch(`${env.B2URL}/file/${env.B2BUCKET}${env.PATH_PREFIX}${url.pathname}`);
+        if (env.REDIRECT_URL && response.status === 404) {
+            return Response.redirect(env.REDIRECT_URL, 301);
+        }
         response = new Response(response.body, { ...response, headers: formatHeaders(response.headers, 86400) });
         ctx.waitUntil(cache.put(request, response.clone()));
     }
 
-    if (env.REDIRECT_URL && (response.status === 404 || (await bodyStatus(response)) === 404)) {
-        return Response.redirect(env.REDIRECT_URL, 301);
-    }
     return response;
 };
