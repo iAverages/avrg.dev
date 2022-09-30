@@ -1,4 +1,5 @@
 import { Env } from ".";
+import bodyStatus from "./helpers/bodyStatus";
 import { formatHeaders } from "./helpers/headers";
 
 export default async (request: Request, env: Env, ctx: ExecutionContext) => {
@@ -12,7 +13,7 @@ export default async (request: Request, env: Env, ctx: ExecutionContext) => {
         ctx.waitUntil(cache.put(request, response.clone()));
     }
 
-    if (env.REDIRECT_URL && response.status === 404) {
+    if (env.REDIRECT_URL && (response.status === 404 || (await bodyStatus(response)) === 404)) {
         return Response.redirect(env.REDIRECT_URL, 301);
     }
     return response;
