@@ -11,5 +11,8 @@
         "start": "wrangler dev",
         "deploy": "wrangler publish"
     },
-    "dependencies": {}
+    "dependencies": {
+        "cloudflare-b2": "git+https://github.com/iAverages/cf-b2.git",
+        "itty-router": "^2.6.5"
+    }
 }
