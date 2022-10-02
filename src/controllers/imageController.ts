@@ -6,7 +6,7 @@ export default async (request: Request, env: Env, ctx: ExecutionContext) => {
     const cache = caches.default;
     let response = await cache.match(request);
     if (!response) {
-        response = await fetch(`${env.B2URL}/file/${env.B2BUCKET}${env.PATH_PREFIX}${url.pathname}`);
+        response = await fetch(`${env.B2URL}/file/${env.B2BUCKET}/${env.PATH_PREFIX}${url.pathname}`);
         if (env.REDIRECT_URL && response.status === 404) {
             return Response.redirect(env.REDIRECT_URL, 301);
         }
