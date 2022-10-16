@@ -1,10 +1,7 @@
 import { BackblazeB2 } from "cloudflare-b2/src";
 import { Env } from "..";
 
-const b2 = new BackblazeB2({
-    applicationKeyId: "0020d4a4136a0090000000017",
-    applicationKey: "K002VdNyOBmudXBYBDSWk3ycqeJwHjI",
-});
+let b2: BackblazeB2 | null = null;
 
 export default async (request: Request, env: Env, ctx: ExecutionContext) => {
     const auth = request.headers.get("Authorization");
@@ -12,8 +9,17 @@ export default async (request: Request, env: Env, ctx: ExecutionContext) => {
         return new Response(JSON.stringify({ message: "Invalid API Token" }), { status: 401 });
     }
 
+    if (!b2) {
+        // I do not thing I can get env without accessing env that is
+        // passed into the function, this is just a slight work around
+        b2 = new BackblazeB2({
+            applicationKeyId: env.B2_KEY_ID,
+            applicationKey: env.B2_KEY,
+        });
+    }
+
     await b2.authorizeAccount();
-    await b2.getUploadUrl("d0bdc44a649193267ae00019");
+    await b2.getUploadUrl(env.B2_BUCKET_ID);
     const formData = await request.formData();
     const file = formData.get("file");
     if (!file || typeof file === "string") {

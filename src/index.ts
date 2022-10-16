@@ -5,6 +5,9 @@ import uploadController from "./controllers/uploadController";
 export interface Env {
     B2URL: string;
     B2BUCKET: string;
+    B2_KEY_ID: string;
+    B2_KEY: string;
+    B2_BUCKET_ID: string;
     PATH_PREFIX: string;
     REDIRECT_URL: string;
     API_TOKEN: string;
