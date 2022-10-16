@@ -26,7 +26,10 @@ export const create = async (request: Request, env: Env, ctx: ExecutionContext) 
         let { key, url } = createShortURLSchema.parse(content);
 
         // This will throw if the includes URL is invalid
-        new URL(url);
+        const parsedURL = new URL(url);
+        if (!parsedURL.protocol.startsWith("http")) {
+            throw new Error();
+        }
 
         if (!key) {
             key = nanoid(6);
