@@ -1,6 +1,7 @@
 import { Router } from "itty-router";
-import imageController from "./controllers/imageController";
+import baseController from "./controllers/baseController";
 import uploadController from "./controllers/uploadController";
+import { create as createShortURLController } from "./controllers/shortenerController";
 
 export interface Env {
     B2URL: string;
@@ -11,12 +12,14 @@ export interface Env {
     PATH_PREFIX: string;
     REDIRECT_URL: string;
     API_TOKEN: string;
+    URLS: KVNamespace;
 }
 
 export const router = Router();
 
 router.post("/api/upload", uploadController);
-router.get("/*", imageController);
+router.post("/api/short", createShortURLController);
+router.get("/*", baseController);
 
 export default {
     fetch: (...args: [any]) =>
