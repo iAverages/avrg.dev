@@ -537,10 +537,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-itty-router@^2.6.5:
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-2.6.6.tgz#78a08c3b7dc1bd90ce832cae8eff7e4cbfbf67ef"
-  integrity sha512-hIPHtXGymCX7Lzb2I4G6JgZFE4QEEQwst9GORK7sMYUpJvLfy4yZJr95r04e8DzoAnj6HcxM2m4TbK+juu+18g==
+itty-router@^3.0.0:
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-3.0.12.tgz#98eee28dd3b3a0d0190125f4328b8c62b816e8e9"
+  integrity sha512-s98XTPhle6GGbaFf0kYrOD3Q8gyhnqvOqkwYijC3AmkceNKqWUp13YHg6dWmqmVv4pP7l7c94XI92I0EXVGO0w==
 
 kleur@^4.1.4:
   version "4.1.5"
