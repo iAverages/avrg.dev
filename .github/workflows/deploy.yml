@@ -1,23 +1,24 @@
 name: Deploy
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        name: Deploy
-        steps:
-            # Install dependencies
-            - uses: actions/checkout@v3
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
-            - run: yarn install --frozen-lockfile
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
+    steps:
+      # Install dependencies 
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+      - run: yarn install --frozen-lockfile
 
-            # Deploy to Cloudflare Workers
-            - name: Publish
-              uses: cloudflare/wrangler-action@2.0.0
-              with:
-                  apiToken: ${{ secrets.CF_API_TOKEN }}
+      # Deploy to Cloudflare Workers
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
