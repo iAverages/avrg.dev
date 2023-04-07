@@ -3,5 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2022-09-30"
 
 kv_namespaces = [
-  { binding = "URLS", id = "354094170efb4b2688890ddcae159f4d" }
+  { binding = "URLS", id = "354094170efb4b2688890ddcae159f4d", preview_id = "18ae02f6570f43829d5a35d714fa2926" }
 ]
+
+[vars]
+PATH_PREFIX = "screenshots"
+REDIRECT_URL = "https://danielraybone.com/"
