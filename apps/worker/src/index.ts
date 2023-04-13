@@ -2,6 +2,7 @@ import { Router } from "itty-router";
 import baseController from "./controllers/baseController";
 import uploadController from "./controllers/uploadController";
 import { create as createShortURLController } from "./controllers/shortenerController";
+import trpcController from "./controllers/trpcController";
 
 export interface Env {
     B2URL: string;
@@ -19,6 +20,7 @@ export const router = Router();
 
 router.post("/api/upload", uploadController);
 router.post("/api/short", createShortURLController);
+router.all("/api/trpc/*", trpcController);
 router.get("/*", baseController);
 
 export default {

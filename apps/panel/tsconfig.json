@@ -1,0 +1,5 @@
+{
+    "extends": "tsconfig/solidjs.json",
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+}

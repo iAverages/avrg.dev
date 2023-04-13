@@ -1,9 +1,10 @@
 import { BackblazeB2 } from "cloudflare-b2/src";
 import { Env } from "..";
+import { IRequest } from "itty-router";
 
 let b2: BackblazeB2 | null = null;
 
-export default async (request: Request, env: Env, ctx: ExecutionContext) => {
+export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
     const auth = request.headers.get("Authorization");
     if (auth !== env.API_TOKEN) {
         return new Response(JSON.stringify({ message: "Invalid API Token" }), { status: 401 });
