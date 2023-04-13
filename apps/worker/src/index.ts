@@ -1,8 +1,9 @@
 import { Router } from "itty-router";
+
 import baseController from "./controllers/baseController";
-import uploadController from "./controllers/uploadController";
 import { create as createShortURLController } from "./controllers/shortenerController";
 import trpcController from "./controllers/trpcController";
+import uploadController from "./controllers/uploadController";
 
 export interface Env {
     B2URL: string;

@@ -1,6 +1,7 @@
 import { BackblazeB2 } from "cloudflare-b2/src";
-import { Env } from "..";
 import { IRequest } from "itty-router";
+
+import { Env } from "..";
 
 let b2: BackblazeB2 | null = null;
 

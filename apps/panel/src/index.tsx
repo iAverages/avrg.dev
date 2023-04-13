@@ -1,9 +1,9 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
 
-import "./index.css";
-import App from "./App";
-import { trpc, queryClient, client } from "./utils/trpc";
+import "@/index.css";
+import Router from "@/Router";
+import { client, queryClient, trpc } from "@/utils/trpc";
 
 const root = document.getElementById("root");
 
@@ -16,7 +16,7 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
     () => (
         <trpc.Provider client={client} queryClient={queryClient}>
-            <App />
+            <Router />
         </trpc.Provider>
     ),
     root!

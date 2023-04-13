@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 
-import logo from "./logo.svg";
 import styles from "./App.module.css";
+import logo from "./logo.svg";
 import { trpc } from "./utils/trpc";
 
 const App: Component = () => {
@@ -18,7 +18,8 @@ const App: Component = () => {
                     class={styles.link}
                     href="https://github.com/solidjs/solid"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     Learn Solid
                 </a>
                 <h1 class="text-3xl font-bold underline text-red-600">Hello world!</h1>

@@ -15,10 +15,12 @@
         "tailwindcss": "^3.3.1",
         "typescript": "^4.9.5",
         "vite": "^4.1.1",
-        "vite-plugin-solid": "^2.5.0"
+        "vite-plugin-solid": "^2.5.0",
+        "vite-tsconfig-paths": "^4.2.0"
     },
     "dependencies": {
         "@avrg.dev/trpc": "*",
+        "@solidjs/router": "^0.8.2",
         "@tanstack/solid-query": "^5.0.0-alpha.16",
         "@trpc/client": "^10.19.1",
         "solid-js": "^1.6.10",

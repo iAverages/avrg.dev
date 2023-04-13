@@ -1,7 +1,8 @@
-import { Env } from "..";
 import { appRouter, createTRPCContext } from "@avrg.dev/trpc";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { IRequest } from "itty-router";
+
+import { Env } from "..";
 
 export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
     if (request.method === "OPTIONS") {

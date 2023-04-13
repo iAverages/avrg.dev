@@ -1,7 +1,8 @@
-import { Env } from "..";
-import { z } from "zod";
-import { nanoid } from "nanoid";
 import { IRequest } from "itty-router";
+import { nanoid } from "nanoid";
+import { z } from "zod";
+
+import { Env } from "..";
 
 export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
     const url = new URL(request.url);
