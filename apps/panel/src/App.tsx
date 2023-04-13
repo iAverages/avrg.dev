@@ -21,6 +21,7 @@ const App: Component = () => {
                     rel="noopener noreferrer">
                     Learn Solid
                 </a>
+                <h1 class="text-3xl font-bold underline text-red-600">Hello world!</h1>
                 <p>{res.data}</p>
             </header>
         </div>
