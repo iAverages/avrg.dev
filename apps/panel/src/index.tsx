@@ -1,6 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
 
+import "flowbite";
 import "@/index.css";
 import Router from "@/Router";
 import { client, queryClient, trpc } from "@/utils/trpc";

@@ -23,6 +23,7 @@
         "@solidjs/router": "^0.8.2",
         "@tanstack/solid-query": "^5.0.0-alpha.16",
         "@trpc/client": "^10.19.1",
+        "flowbite": "^1.6.5",
         "solid-js": "^1.6.10",
         "solid-trpc": "^0.0.11-rc.3",
         "superjson": "^1.12.2"
