@@ -8,15 +8,17 @@ const getBaseUrl = () => {
     return import.meta.env.API_WORKER_URL || "http://localhost:8787";
 };
 
-export const trpc = createTRPCSolid<AppRouter>();
+export const api = createTRPCSolid<AppRouter>();
 
-export const client = trpc.createClient({
+export const client = api.createClient({
     transformer: superjson,
     links: [
+        loggerLink({
+            enabled: () => true,
+        }),
         httpBatchLink({
             url: `${getBaseUrl()}/api/trpc`,
         }),
-        loggerLink(),
     ],
 });
 

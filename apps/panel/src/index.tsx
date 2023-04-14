@@ -4,7 +4,7 @@ import { render } from "solid-js/web";
 import "flowbite";
 import "@/index.css";
 import Router from "@/Router";
-import { client, queryClient, trpc } from "@/utils/trpc";
+import { api, client, queryClient } from "@/utils/trpc";
 
 const root = document.getElementById("root");
 
@@ -16,9 +16,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 
 render(
     () => (
-        <trpc.Provider client={client} queryClient={queryClient}>
+        <api.Provider client={client} queryClient={queryClient}>
             <Router />
-        </trpc.Provider>
+        </api.Provider>
     ),
     root!
 );

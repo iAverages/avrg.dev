@@ -11,8 +11,21 @@ import { type FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-export const createTRPCContext = async (opts: FetchCreateContextFnOptions) => {
-    return opts;
+// TODO: Move this to own package and import on worker and trpc?
+export interface Env {
+    B2URL: string;
+    B2BUCKET: string;
+    B2_KEY_ID: string;
+    B2_KEY: string;
+    B2_BUCKET_ID: string;
+    PATH_PREFIX: string;
+    REDIRECT_URL: string;
+    API_TOKEN: string;
+    URLS: KVNamespace;
+}
+
+export const createTRPCContext = async (opts: FetchCreateContextFnOptions, env: Env) => {
+    return { ...opts, env };
 };
 
 const t = initTRPC.context<typeof createTRPCContext>().create({

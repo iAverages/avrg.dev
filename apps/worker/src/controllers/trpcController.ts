@@ -18,7 +18,7 @@ export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
         router: appRouter,
         endpoint: "/api/trpc",
         req: request as any as Request,
-        createContext: createTRPCContext,
+        createContext: (opts) => createTRPCContext(opts, env),
         responseMeta: () => {
             return {
                 headers: {

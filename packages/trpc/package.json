@@ -8,5 +8,9 @@
     "dependencies": {
         "@trpc/server": "^10.19.1",
         "superjson": "^1.12.2"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20230404.0",
+        "wrangler": "^2.15.1"
     }
 }

@@ -22,6 +22,7 @@
         "@avrg.dev/trpc": "*",
         "@solidjs/router": "^0.8.2",
         "@tanstack/solid-query": "^5.0.0-alpha.16",
+        "@tanstack/solid-table": "^8.8.5",
         "@trpc/client": "^10.19.1",
         "flowbite": "^1.6.5",
         "solid-js": "^1.6.10",
