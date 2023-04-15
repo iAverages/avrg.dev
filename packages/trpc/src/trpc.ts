@@ -8,6 +8,7 @@
  */
 import { initTRPC } from "@trpc/server";
 import { type FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
+import { BackblazeB2 } from "cloudflare-b2/src";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
@@ -44,3 +45,24 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
 export const createTRPCRouter = t.router;
 
 export const publicProcedure = t.procedure;
+
+let b2: BackblazeB2 | null = null;
+
+const b2Context = t.middleware(({ ctx, next }) => {
+    if (!b2) {
+        // I do not thing I can get env without accessing env that is
+        // passed into the function, this is just a slight work around
+        b2 = new BackblazeB2({
+            applicationKeyId: ctx.env.B2_KEY_ID,
+            applicationKey: ctx.env.B2_KEY,
+        });
+    }
+
+    return next({
+        ctx: {
+            b2,
+        },
+    });
+});
+
+export const b2Procedure = t.procedure.use(b2Context);

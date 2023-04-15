@@ -2,9 +2,9 @@
 import { render } from "solid-js/web";
 
 import "flowbite";
-import "@/index.css";
-import Router from "@/Router";
-import { api, client, queryClient } from "@/utils/trpc";
+import "~/index.css";
+import Router from "~/Router";
+import { api, client, queryClient } from "~/utils/trpc";
 
 const root = document.getElementById("root");
 

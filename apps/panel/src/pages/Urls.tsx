@@ -1,9 +1,8 @@
 import { ColumnDef, createSolidTable, getCoreRowModel } from "@tanstack/solid-table";
 import { For, createEffect, createSignal } from "solid-js";
-
-import Layout from "@/components/layout";
-import AutoTable from "@/components/table";
-import { api } from "@/utils/trpc";
+import Layout from "~/components/layout";
+import AutoTable from "~/components/table";
+import { api } from "~/utils/trpc";
 
 type Url = {
     name: string;
