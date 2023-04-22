@@ -1,32 +1,35 @@
 {
     "name": "@avrg.dev/panel",
-    "version": "0.0.0",
     "private": true,
+    "version": "0.0.0",
+    "type": "module",
     "scripts": {
-        "start": "vite",
         "dev": "vite",
-        "build": "vite build",
-        "serve": "vite preview"
-    },
-    "license": "GPL-3.0",
-    "devDependencies": {
-        "autoprefixer": "^10.4.14",
-        "postcss": "^8.4.21",
-        "tailwindcss": "^3.3.1",
-        "typescript": "^4.9.5",
-        "vite": "^4.2.1",
-        "vite-plugin-solid": "^2.7.0",
-        "vite-tsconfig-paths": "^4.2.0"
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
     },
     "dependencies": {
         "@avrg.dev/trpc": "*",
-        "@solidjs/router": "^0.8.2",
-        "@tanstack/solid-query": "^5.0.0-alpha.16",
-        "@tanstack/solid-table": "^8.8.5",
-        "@trpc/client": "^10.19.1",
-        "flowbite": "^1.6.5",
-        "solid-js": "^1.6.10",
-        "solid-trpc": "^0.0.11-rc.3",
-        "superjson": "^1.12.2"
+        "@tanstack/react-query": "^4.29.3",
+        "@trpc/client": "^10.21.1",
+        "@trpc/react-query": "^10.21.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.57.1",
+        "@vitejs/plugin-react": "^4.0.0-beta.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.38.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.3.4",
+        "postcss": "^8.4.23",
+        "tailwindcss": "^3.3.1",
+        "typescript": "^5.0.2",
+        "vite": "^4.3.0"
     }
 }

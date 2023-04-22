@@ -66,3 +66,9 @@ const b2Context = t.middleware(({ ctx, next }) => {
 });
 
 export const b2Procedure = t.procedure.use(b2Context);
+
+// temp fix for incorrect types in solid-trpc
+export interface InfiniteData<TData> {
+    pages: TData[];
+    pageParams: unknown[];
+}

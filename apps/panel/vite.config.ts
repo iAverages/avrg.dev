@@ -1,13 +1,10 @@
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
-import tsconfigPaths from "vite-tsconfig-paths";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [solidPlugin(), tsconfigPaths()],
+    plugins: [react()],
     server: {
         port: 3000,
-    },
-    build: {
-        target: "esnext",
     },
 });

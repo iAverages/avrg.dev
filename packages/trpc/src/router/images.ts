@@ -1,7 +1,7 @@
 import { ListFileNamesResponse } from "cloudflare-b2/src/interface";
 import { z } from "zod";
 
-import { b2Procedure, createTRPCRouter, publicProcedure } from "../trpc";
+import { InfiniteData, b2Procedure, createTRPCRouter, publicProcedure } from "../trpc";
 
 let isAuthed = false;
 
