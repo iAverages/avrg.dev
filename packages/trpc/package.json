@@ -7,7 +7,7 @@
     "types": "src/index.ts",
     "dependencies": {
         "@trpc/server": "^10.20.0",
-        "cloudflare-b2": "git+https://github.com/iAverages/cf-b2.git",
+        "cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
         "superjson": "^1.12.3"
     },
     "devDependencies": {

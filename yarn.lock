@@ -2091,6 +2091,11 @@ class-variance-authority@^0.5.2:
   version "0.0.0"
   resolved "git+ssh://git@github.com/iAverages/cf-b2.git#f55390a67962a90bfdeae2d8d0863798627999ad"
 
+"cloudflare-b2@https://github.com/iAverages/cf-b2.git":
+  version "0.0.0"
+  uid f55390a67962a90bfdeae2d8d0863798627999ad
+  resolved "https://github.com/iAverages/cf-b2.git#f55390a67962a90bfdeae2d8d0863798627999ad"
+
 clsx@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
