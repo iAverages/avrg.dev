@@ -1,0 +1,22 @@
+{
+    "name": "@avrg.dev/worker",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.0.0",
+        "typescript": "^5.0.0",
+        "wrangler": "2.14.0"
+    },
+    "private": true,
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler publish"
+    },
+    "dependencies": {
+        "@avrg.dev/trpc": "*",
+        "@valu/trpc-fetch-api-adapter": "^0.0.3",
+        "cloudflare-b2": "git+https://github.com/iAverages/cf-b2.git",
+        "itty-router": "^3.0.0",
+        "nanoid": "^4.0.0",
+        "zod": "^3.19.1"
+    }
+}

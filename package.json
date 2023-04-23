@@ -1,20 +1,25 @@
 {
-    "name": "avrg-dev",
-    "version": "1.0.0",
-    "devDependencies": {
-        "@cloudflare/workers-types": "^4.0.0",
-        "typescript": "^5.0.0",
-        "wrangler": "2.14.0"
-    },
     "private": true,
     "scripts": {
-        "start": "wrangler dev",
-        "deploy": "wrangler publish"
+        "build": "turbo run build",
+        "dev": "turbo run dev",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "panel": "yarn workspace @avrg.dev/panel",
+        "worker": "yarn workspace @avrg.dev/worker",
+        "trpc": "yarn workspace @avrg.dev/trpc"
     },
-    "dependencies": {
-        "cloudflare-b2": "git+https://github.com/iAverages/cf-b2.git",
-        "itty-router": "^3.0.0",
-        "nanoid": "^4.0.0",
-        "zod": "^3.19.1"
-    }
+    "devDependencies": {
+        "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
+        "eslint": "^7.32.0",
+        "eslint-config-custom": "*",
+        "prettier": "^2.8.7",
+        "turbo": "latest"
+    },
+    "name": "avrg.dev",
+    "packageManager": "yarn@1.22.19",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ]
 }
