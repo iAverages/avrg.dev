@@ -9,25 +9,28 @@ type IRequestWithCookies = IRequest & {
     cookies: Record<string, string>;
 };
 
+const respond = (request: IRequest, body: BodyInit | null, init: ResponseInit = {}) => {
+    return new Response(body, {
+        ...init,
+        headers: {
+            ...init.headers,
+            "Access-Control-Allow-Origin": request.headers.get("origin") ?? "*",
+            "Access-Control-Allow-Headers": request.headers.get("access-control-request-headers") ?? "*",
+            "Access-Control-Allow-Credentials": "true",
+        },
+    });
+};
+
 export default async (request: IRequestWithCookies, env: Env, ctx: ExecutionContext) => {
     if (request.method === "OPTIONS") {
-        return new Response(null, {
-            headers: {
-                "Access-Control-Allow-Origin": request.headers.get("origin") ?? "*",
-                "Access-Control-Allow-Headers": request.headers.get("access-control-request-headers") ?? "*",
-            },
-        });
+        return respond(request, null);
     }
 
     if (env.NODE_ENV !== "development") {
         const jwtToken = request.cookies.CF_Authorization;
         if (!jwtToken || (await jwt.verify(jwtToken, env.API_TOKEN)) === false) {
-            return new Response(JSON.stringify({ message: "Invalid Authorization header" }), {
+            return respond(request, JSON.stringify({ message: "Invalid Authorization header" }), {
                 status: 401,
-                headers: {
-                    "Access-Control-Allow-Origin": request.headers.get("origin") ?? "*",
-                    "Access-Control-Allow-Headers": request.headers.get("access-control-request-headers") ?? "*",
-                },
             });
         }
     }
