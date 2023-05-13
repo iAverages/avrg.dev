@@ -15,6 +15,7 @@ export interface Env {
     REDIRECT_URL: string;
     API_TOKEN: string;
     URLS: KVNamespace;
+    NODE_ENV: string;
 }
 
 export const router = Router();

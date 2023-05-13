@@ -1570,6 +1570,11 @@
   resolved "https://registry.npmjs.org/@trpc/server/-/server-10.21.1.tgz"
   integrity sha512-4E4upTD2/Aq0Dm9HW4nbKSoIlqbV/ajRqNl1MCFBd9FjTv47qq2ncmAWMbb0AIVh2UV87PJlTjpPNNecRm6g9Q==
 
+"@tsndr/cloudflare-worker-jwt@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@tsndr/cloudflare-worker-jwt/-/cloudflare-worker-jwt-2.2.1.tgz#d52bd14a4dc42254e8b117d8f781ea965cf2490e"
+  integrity sha512-yYxjmag5AXXs7FDCUlse8cCTQlug3fbrqUb4/s4kvdauOg5wq2V6BayHD/OUWOGmgohefFRqu4vA5phU3+Cyng==
+
 "@types/better-sqlite3@^7.6.0":
   version "7.6.4"
   resolved "https://registry.npmjs.org/@types/better-sqlite3/-/better-sqlite3-7.6.4.tgz"
