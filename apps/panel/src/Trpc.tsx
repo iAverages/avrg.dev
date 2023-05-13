@@ -10,7 +10,7 @@ type TrpcProviderProps = {
 };
 
 const getBaseUrl = () => {
-    return import.meta.env.API_WORKER_URL || "http://localhost:8787";
+    return import.meta.env.CF_PAGES_URL || "http://localhost:8787";
 };
 
 const Trpc = ({ children }: TrpcProviderProps) => {
