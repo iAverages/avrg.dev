@@ -13,6 +13,13 @@ const getBaseUrl = () => {
     return import.meta.env.VITE_API_WORKER_URL || "http://localhost:8787";
 };
 
+const getCookie = (name: string) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts!.pop()!.split(";").shift();
+    return null;
+};
+
 const Trpc = ({ children }: TrpcProviderProps) => {
     const [queryClient] = useState(() => new QueryClient());
     const [trpcClient] = useState(() =>
@@ -24,7 +31,10 @@ const Trpc = ({ children }: TrpcProviderProps) => {
                     fetch(url, options) {
                         return fetch(url, {
                             ...options,
-                            credentials: "include",
+                            headers: {
+                                ...(options?.headers ?? {}),
+                                Authorization: `Bearer ${getCookie("token")}`,
+                            },
                         });
                     },
                 }),
