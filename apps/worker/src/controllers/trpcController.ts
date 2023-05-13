@@ -5,15 +5,11 @@ import { IRequest } from "itty-router";
 
 import { Env } from "..";
 
-const getJwt = (request: IRequest) => {
-    const authHeader = request.headers.get("Authorization");
-    if (!authHeader || authHeader.substring(0, 6) !== "Bearer") {
-        return null;
-    }
-    return authHeader.substring(6).trim();
+type IRequestWithCookies = IRequest & {
+    cookies: Record<string, string>;
 };
 
-export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
+export default async (request: IRequestWithCookies, env: Env, ctx: ExecutionContext) => {
     if (request.method === "OPTIONS") {
         return new Response(null, {
             headers: {
@@ -23,9 +19,8 @@ export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
         });
     }
 
-    const jwtToken = getJwt(request);
-
     if (env.NODE_ENV !== "development") {
+        const jwtToken = request.cookies.CF_Authorization;
         if (!jwtToken || (await jwt.verify(jwtToken, env.API_TOKEN)) === false) {
             return new Response(JSON.stringify({ message: "Invalid Authorization header" }), {
                 status: 401,

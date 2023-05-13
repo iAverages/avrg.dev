@@ -1,4 +1,4 @@
-import { Router } from "itty-router";
+import { ThrowableRouter, withCookies } from "itty-router-extras";
 
 import baseController from "./controllers/baseController";
 import { create as createShortURLController } from "./controllers/shortenerController";
@@ -18,11 +18,11 @@ export interface Env {
     NODE_ENV: string;
 }
 
-export const router = Router();
+export const router = ThrowableRouter();
 
 router.post("/api/upload", uploadController);
 router.post("/api/short", createShortURLController);
-router.all("/api/trpc/*", trpcController);
+router.all("/api/trpc/*", withCookies, trpcController);
 router.get("/*", baseController);
 
 export default {

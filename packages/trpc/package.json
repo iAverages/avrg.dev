@@ -8,10 +8,12 @@
     "dependencies": {
         "@trpc/server": "^10.20.0",
         "cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
+        "itty-router-extras": "^0.4.2",
         "superjson": "^1.12.3"
     },
     "devDependencies": {
         "@cloudflare/workers-types": "^4.20230404.0",
+        "@types/itty-router-extras": "^0.4.0",
         "wrangler": "^2.15.1"
     }
 }
