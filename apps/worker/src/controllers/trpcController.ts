@@ -9,8 +9,16 @@ type IRequestWithCookies = IRequest & {
     cookies: Record<string, string>;
 };
 
-const respond = (request: IRequest, body: BodyInit | null, init: ResponseInit = {}) => {
-    return new Response(body, {
+const getJwt = (request: IRequest) => {
+    const authHeader = request.headers.get("Authorization");
+    if (!authHeader || authHeader.substring(0, 6) !== "Bearer") {
+        return null;
+    }
+    return authHeader.substring(6).trim();
+};
+
+const respond = (request: IRequest, body: Record<string, string> | null, init: ResponseInit = {}) => {
+    return new Response(JSON.stringify(body), {
         ...init,
         headers: {
             ...init.headers,
@@ -27,11 +35,15 @@ export default async (request: IRequestWithCookies, env: Env, ctx: ExecutionCont
     }
 
     if (env.NODE_ENV !== "development") {
-        const jwtToken = request.cookies.CF_Authorization;
-        if (!jwtToken || (await jwt.verify(jwtToken, env.API_TOKEN)) === false) {
-            return respond(request, JSON.stringify({ message: "Invalid Authorization header" }), {
-                status: 401,
-            });
+        const jwtToken = getJwt(request);
+        if (!jwtToken || !(await jwt.verify(jwtToken, env.API_TOKEN))) {
+            return respond(
+                request,
+                { message: "Invalid Authorization header", jwt: jwtToken },
+                {
+                    status: 401,
+                }
+            );
         }
     }
 
