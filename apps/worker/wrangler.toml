@@ -9,3 +9,4 @@ kv_namespaces = [
 [vars]
 PATH_PREFIX = "screenshots"
 REDIRECT_URL = "https://danielraybone.com/"
+CF_ACCESS_TEAM = "kirsi"

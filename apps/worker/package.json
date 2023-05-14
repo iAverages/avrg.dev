@@ -13,7 +13,6 @@
     },
     "dependencies": {
         "@avrg.dev/trpc": "*",
-        "@tsndr/cloudflare-worker-jwt": "^2.2.1",
         "@valu/trpc-fetch-api-adapter": "^0.0.3",
         "cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
         "itty-router": "^3.0.0",

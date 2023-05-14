@@ -33,7 +33,7 @@ const Trpc = ({ children }: TrpcProviderProps) => {
                             ...options,
                             headers: {
                                 ...(options?.headers ?? {}),
-                                Authorization: `Bearer ${getCookie("token")}`,
+                                Authorization: `Bearer ${getCookie("CF_Authorization")}`,
                             },
                         });
                     },

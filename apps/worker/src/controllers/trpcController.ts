@@ -1,7 +1,7 @@
 import { appRouter, createTRPCContext } from "@avrg.dev/trpc";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
-import jwt from "@tsndr/cloudflare-worker-jwt";
 import { IRequest } from "itty-router";
+import * as jose from "jose";
 
 import { Env } from "..";
 
@@ -29,22 +29,44 @@ const respond = (request: IRequest, body: Record<string, string> | null, init: R
     });
 };
 
+let JWKS: (
+    protectedHeader?: jose.JWSHeaderParameters | undefined,
+    token?: jose.FlattenedJWSInput | undefined
+) => Promise<jose.KeyLike>;
+
+const verifyJwt = async (jwtToken: string, env: Env) => {
+    if (env.NODE_ENV === "development") {
+        return true;
+    }
+
+    if (!JWKS) {
+        JWKS = jose.createRemoteJWKSet(
+            new URL(`https://${env.CF_ACCESS_TEAM}.cloudflareaccess.com/cdn-cgi/access/certs`)
+        );
+    }
+
+    try {
+        await jose.jwtVerify(jwtToken, JWKS);
+        return true;
+    } catch (e) {
+        return false;
+    }
+};
+
 export default async (request: IRequestWithCookies, env: Env, ctx: ExecutionContext) => {
     if (request.method === "OPTIONS") {
         return respond(request, null);
     }
 
-    if (env.NODE_ENV !== "development") {
-        const jwtToken = getJwt(request);
-        if (!jwtToken || !(await jwt.verify(jwtToken, env.API_TOKEN))) {
-            return respond(
-                request,
-                { message: "Invalid Authorization header", jwt: jwtToken },
-                {
-                    status: 401,
-                }
-            );
-        }
+    const jwtToken = getJwt(request);
+    if (!jwtToken || !(await verifyJwt(jwtToken, env))) {
+        return respond(
+            request,
+            { message: "Invalid Authorization header" },
+            {
+                status: 401,
+            }
+        );
     }
 
     const response = await fetchRequestHandler({

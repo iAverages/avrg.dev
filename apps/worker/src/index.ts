@@ -16,6 +16,7 @@ export interface Env {
     API_TOKEN: string;
     URLS: KVNamespace;
     NODE_ENV: string;
+    CF_ACCESS_TEAM: string;
 }
 
 export const router = ThrowableRouter();

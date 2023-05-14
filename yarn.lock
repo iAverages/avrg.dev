@@ -1570,11 +1570,6 @@
   resolved "https://registry.npmjs.org/@trpc/server/-/server-10.21.1.tgz"
   integrity sha512-4E4upTD2/Aq0Dm9HW4nbKSoIlqbV/ajRqNl1MCFBd9FjTv47qq2ncmAWMbb0AIVh2UV87PJlTjpPNNecRm6g9Q==
 
-"@tsndr/cloudflare-worker-jwt@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@tsndr/cloudflare-worker-jwt/-/cloudflare-worker-jwt-2.2.1.tgz#d52bd14a4dc42254e8b117d8f781ea965cf2490e"
-  integrity sha512-yYxjmag5AXXs7FDCUlse8cCTQlug3fbrqUb4/s4kvdauOg5wq2V6BayHD/OUWOGmgohefFRqu4vA5phU3+Cyng==
-
 "@types/better-sqlite3@^7.6.0":
   version "7.6.4"
   resolved "https://registry.npmjs.org/@types/better-sqlite3/-/better-sqlite3-7.6.4.tgz"
@@ -3391,6 +3386,11 @@ jiti@^1.17.2:
   version "1.18.2"
   resolved "https://registry.npmjs.org/jiti/-/jiti-1.18.2.tgz"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
+
+jose@^4.14.4:
+  version "4.14.4"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-4.14.4.tgz#59e09204e2670c3164ee24cbfe7115c6f8bff9ca"
+  integrity sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==
 
 js-sdsl@^4.1.4:
   version "4.4.0"
