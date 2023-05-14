@@ -1,15 +1,12 @@
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { api } from "@/utils/api";
 
-const buildPrefix = (prefix: string, idx: number) => {
-    return prefix.split("/").slice(0, -2).join("/") + "/";
-};
-
 const Images = () => {
     const [prefix, setPrefix] = useState("");
-    const { data } = api.image.list.useInfiniteQuery(
+    const { data, fetchNextPage, hasNextPage } = api.image.list.useInfiniteQuery(
         { path: prefix ?? "", limit: 10 },
         {
             getNextPageParam: (lastPage) => lastPage.nextFileName,
@@ -18,24 +15,10 @@ const Images = () => {
 
     return (
         <>
-            {/* <div>{prefix}</div> */}
-            {/* <div>{prefix.split("/").slice(0, -2).join("/") + "/"}</div> */}
-            {/* <div>
-                {prefix.split("/").map((part, idx) => {
-                    const previousParts = prefix.split("/").slice(0, -2);
-                    const oldPrefix = previousParts.join("/") + (previousParts.length > 0 ? "/" : "");
-                    console.log("oldPrefix", oldPrefix);
-                    return (
-                        <span key={part} onClick={() => setPrefix(oldPrefix)}>
-                            {part} /
-                        </span>
-                    );
-                })}
-            </div> */}
             {data?.pages.map((page) => {
                 return (
                     <div key={page.nextFileName} className={"grid grid-cols-4"}>
-                        {page.files.map((file, idx) => {
+                        {page.files.map((file) => {
                             let comp = <>Unknown content type - {file.fileName}</>;
                             if (file.action === "folder") {
                                 return (
@@ -61,15 +44,12 @@ const Images = () => {
                                 );
                             }
 
-                            return (
-                                <div key={file.fileId} className={""}>
-                                    {comp}
-                                </div>
-                            );
+                            return <div key={file.fileId}>{comp}</div>;
                         })}
                     </div>
                 );
             })}
+            {hasNextPage && <Button onClick={() => fetchNextPage()}>Load More</Button>}
         </>
     );
 };

@@ -10,6 +10,7 @@
         "cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
         "itty-router-extras": "^0.4.2",
         "jose": "^4.14.4",
+        "nanoid": "^4.0.2",
         "superjson": "^1.12.3"
     },
     "devDependencies": {
