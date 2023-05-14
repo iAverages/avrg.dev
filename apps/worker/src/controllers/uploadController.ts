@@ -18,9 +18,9 @@ export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
             applicationKeyId: env.B2_KEY_ID,
             applicationKey: env.B2_KEY,
         });
+        await b2.authorizeAccount();
     }
 
-    await b2.authorizeAccount();
     await b2.getUploadUrl(env.B2_BUCKET_ID);
     const formData = await request.formData();
     const file = formData.get("file");

@@ -50,12 +50,13 @@ let b2: BackblazeB2 | null = null;
 
 const b2Context = t.middleware(({ ctx, next }) => {
     if (!b2) {
-        // I do not thing I can get env without accessing env that is
+        // I do not think I can get env without accessing env that is
         // passed into the function, this is just a slight work around
         b2 = new BackblazeB2({
             applicationKeyId: ctx.env.B2_KEY_ID,
             applicationKey: ctx.env.B2_KEY,
         });
+        b2.authorizeAccount();
     }
 
     return next({
@@ -66,9 +67,3 @@ const b2Context = t.middleware(({ ctx, next }) => {
 });
 
 export const b2Procedure = t.procedure.use(b2Context);
-
-// temp fix for incorrect types in solid-trpc
-export interface InfiniteData<TData> {
-    pages: TData[];
-    pageParams: unknown[];
-}
