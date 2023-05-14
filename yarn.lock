@@ -1530,23 +1530,23 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^10.21.1":
-  version "10.21.1"
-  resolved "https://registry.npmjs.org/@trpc/client/-/client-10.21.1.tgz"
-  integrity sha512-oZgPbghs9y2frTCA9mZPSAlVknV9stCTKYO5nsvRr0aX+oaA0URoXJTKZTSpLZxLfuwWgxBj4iTiCWWWmaVelw==
+  version "10.26.0"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.26.0.tgz#eaccff7b101882cbf543931abc1f764b3b17bae6"
+  integrity sha512-ojHxQFIE97rBEGPK8p1ijbzo0T1IdEBoJ9fFSgWWL9FMuEEA/DNQ9s0uuiOrDKhCCdTFT1unfRharoJhB2/O2w==
 
 "@trpc/react-query@^10.21.1":
-  version "10.21.1"
-  resolved "https://registry.npmjs.org/@trpc/react-query/-/react-query-10.21.1.tgz"
-  integrity sha512-sCLJW9v79sJhVj3L6Ck74mImvKBXrq2KOKtdguxaZZ5rgeqMyQuc8bGHRpf9yfeV08uMNl4Svz1QTee9PjdSqg==
+  version "10.26.0"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.26.0.tgz#8be236a4872183527960edc3588debecbba363fa"
+  integrity sha512-n+enpalaCZhd3A/mbZmXeydRZHsAJo7mzc2ncgHn5S+C3SrfOM897uQdbHdj02Li25ULxzP1O92w+vZzmFbgkA==
 
 "@trpc/server@^10.20.0":
-  version "10.21.1"
-  resolved "https://registry.npmjs.org/@trpc/server/-/server-10.21.1.tgz"
-  integrity sha512-4E4upTD2/Aq0Dm9HW4nbKSoIlqbV/ajRqNl1MCFBd9FjTv47qq2ncmAWMbb0AIVh2UV87PJlTjpPNNecRm6g9Q==
+  version "10.26.0"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.26.0.tgz#22b0cc16641111550a071da3ccdd588c344fe3a3"
+  integrity sha512-+Wt0NFAeflVSNiUnHIDNN3C8jP7XIRmYrcgJ6IsAnm0lK4p/FkpCpeu1aig5qxrgZx30PHNDLZ/3FttVSEW2aQ==
 
 "@types/better-sqlite3@^7.6.0":
   version "7.6.4"
-  resolved "https://registry.npmjs.org/@types/better-sqlite3/-/better-sqlite3-7.6.4.tgz"
+  resolved "https://registry.yarnpkg.com/@types/better-sqlite3/-/better-sqlite3-7.6.4.tgz#102462611e67aadf950d3ccca10292de91e6f35b"
   integrity sha512-dzrRZCYPXIXfSR1/surNbJ/grU3scTaygS0OMzjlGf71i9sc2fGyHPXXiXmEvNIoE0cGwsanEFMVJxPXmco9Eg==
   dependencies:
     "@types/node" "*"
