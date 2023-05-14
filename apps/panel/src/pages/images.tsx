@@ -19,6 +19,9 @@ const Images = () => {
                 return (
                     <div key={page.nextFileName} className={"grid grid-cols-4"}>
                         {page.files.map((file) => {
+                            // Ignore backblaze empty files
+                            if (file.fileName === ".bzEmpty") return null;
+
                             let comp = <>Unknown content type - {file.fileName}</>;
                             if (file.action === "folder") {
                                 return (
