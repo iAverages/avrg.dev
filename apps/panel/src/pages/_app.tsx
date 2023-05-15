@@ -11,7 +11,7 @@ const App = ({ children }: AppProps) => {
     return (
         <>
             <Navigation />
-            <main>{children}</main>
+            <main className={"px-8"}>{children}</main>
             <ReactQueryDevtools position={"bottom-right"} />
         </>
     );

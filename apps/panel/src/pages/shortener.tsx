@@ -114,11 +114,11 @@ const Shortener = () => {
                     </DialogFooter>
                 </DialogContent>
             </Dialog>
-            <Table>
+            <Table className={"table-fixed block"}>
                 <THead>
                     <Tr>
                         <Td>Slug</Td>
-                        <Td>URL</Td>
+                        <Td className={"w-1 whitespace-break-spaces"}>URL</Td>
                         <Td className={"w-1 md:w-64 lg:w-96"}>Actions</Td>
                     </Tr>
                 </THead>
@@ -132,7 +132,9 @@ const Shortener = () => {
                         return (
                             <Tr key={slug}>
                                 <Td>{slug}</Td>
-                                <Td>{url}</Td>
+                                <Td>
+                                    <div className={"overflow-hidden max-w-[54rem]"}>{url}</div>
+                                </Td>
                                 <Td>
                                     <div className={"flex gap-2"}>
                                         <Button variant={"destructive"} onClick={() => deleteUrl(slug)}>
