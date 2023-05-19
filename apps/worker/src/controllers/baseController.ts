@@ -8,9 +8,13 @@ const controllerSteps = [imageController, shortenerController];
 
 export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
     for (const controller of controllerSteps) {
-        const response = await controller(request, env, ctx);
-        if (!response) continue;
-        return response;
+        try {
+            const response = await controller(request, env, ctx);
+            if (!response) continue;
+            return response;
+        } catch (e) {
+            continue;
+        }
     }
 
     return env.REDIRECT_URL

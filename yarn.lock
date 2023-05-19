@@ -4520,7 +4520,7 @@ wouter@^2.10.1:
   dependencies:
     use-sync-external-store "^1.0.0"
 
-wrangler@3.0.0, wrangler@^3.0.0:
+wrangler@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.0.0.tgz#de610c620f0674975267a8a478df1bb0304045af"
   integrity sha512-azppXJjEQeaVg3wxFZJOGDGtpR8e9clHr2aHuanGHOk9vX3gvesCv97BF/n8qh1Y1d7vDKOBdfQW3UOYZNFGNw==
