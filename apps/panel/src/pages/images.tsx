@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { api } from "@/utils/api";
 
+const getPath = (prefix: string, part: string) => {
+    const parts = prefix.split("/").filter((part) => part !== "");
+    const path = parts.slice(0, parts.indexOf(part) - 1).join("/");
+    return path;
+};
+
 const Images = () => {
     const [prefix, setPrefix] = useState("");
     const { data, fetchNextPage, hasNextPage } = api.image.list.useInfiniteQuery(
@@ -15,9 +21,30 @@ const Images = () => {
 
     return (
         <>
+            {/* Incomplete */}
+            <div>
+                {prefix
+                    .split("/")
+                    .filter((part) => part !== "")
+                    .map((part, idx) => (
+                        <>
+                            <span
+                                onClick={() => {
+                                    if (idx === prefix.split("/").filter((part) => part !== "").length - 1) return;
+                                    setPrefix(getPath(prefix, part));
+                                }}
+                            >
+                                {part} <span className={"text-muted-foreground"}>/</span>{" "}
+                            </span>
+                        </>
+                    ))}
+            </div>
             {data?.pages.map((page) => {
                 return (
-                    <div key={page.nextFileName} className={"grid grid-cols-4"}>
+                    <div
+                        key={page.nextFileName}
+                        className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"}
+                    >
                         {page.files.map((file) => {
                             // Ignore backblaze empty files
                             if (file.fileName === ".bzEmpty") return null;
