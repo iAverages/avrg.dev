@@ -1392,19 +1392,19 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^10.21.1":
-  version "10.27.3"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.27.3.tgz#e08abc901e4e577a402a1f924ed785e1c43944ce"
-  integrity sha512-UjGHU7/XA8l7uUd0G7bIDlLHMBy+r5Z9XKe8/6uTGEc+u//0GnZ33iCeLkp86pPKzARmUnRDfRV1BYRb4f9+Jw==
+  version "10.28.0"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.28.0.tgz#fb474107b480e3446eb9ff39104d30cbf31048b4"
+  integrity sha512-Xhl2xdGI4PkI/a8xaTbsdpIXOy7PeOZaBBdvBgs2kpKiznNAI10qPrK+GLIDkSxvekLqDSnVYIhS0kU0FkhEXw==
 
 "@trpc/react-query@^10.21.1":
-  version "10.27.3"
-  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.27.3.tgz#926b5dc4589488ba6c71d7cd2badc556840637fc"
-  integrity sha512-DfZLQbG59PcRywwHmPrPL1kjzMZwARyDZeZvBiZLNVBqvmjHUSJhlr+sTy65Y0q+MKPr6hcf85AMmKdyGiraMQ==
+  version "10.28.0"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.28.0.tgz#349b1d8f28b6bf10ead51b9902175f5e176b9652"
+  integrity sha512-ssXaZbtNHrgvUW/bmwpiEttF1t1TMZAp/FQ98puXE7MqpodEi2aIum1Ou9Cb1w0lEc4mPwOwztzwuUSGsdCD6Q==
 
 "@trpc/server@^10.20.0":
-  version "10.27.3"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.27.3.tgz#2bfdc8bd4403838129618cddad6232127f486937"
-  integrity sha512-WFW4al/ceCseYvp0ZeCwcY7wcypXuA0N0hH0l/VCSk7CHMJ5N9iduVtZXcnap3GAC8FNUEdwUW2/eQQ4DRra9A==
+  version "10.28.0"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.28.0.tgz#9c70d56dbe20b7726cf752006f815b2f7177c95e"
+  integrity sha512-PrJ/VgRuujMCtNkgrldCPbqv3+yk1LKweKEfvQHTN2L0WIaKJPXzSsOTJS9PqNpFOTqzaK5mgDbypIFvq7SYow==
 
 "@types/itty-router-extras@^0.4.0":
   version "0.4.0"
