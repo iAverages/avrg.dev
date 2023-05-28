@@ -3216,10 +3216,10 @@ itty-router@^2.3.10:
   resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-2.6.6.tgz#78a08c3b7dc1bd90ce832cae8eff7e4cbfbf67ef"
   integrity sha512-hIPHtXGymCX7Lzb2I4G6JgZFE4QEEQwst9GORK7sMYUpJvLfy4yZJr95r04e8DzoAnj6HcxM2m4TbK+juu+18g==
 
-itty-router@^3.0.0:
-  version "3.0.12"
-  resolved "https://registry.npmjs.org/itty-router/-/itty-router-3.0.12.tgz"
-  integrity sha512-s98XTPhle6GGbaFf0kYrOD3Q8gyhnqvOqkwYijC3AmkceNKqWUp13YHg6dWmqmVv4pP7l7c94XI92I0EXVGO0w==
+itty-router@^4.0.0:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-4.0.5.tgz#341c42c0a96d9175e6b899e5841c11e87c737fdd"
+  integrity sha512-cY4+c+K8uU8VIvUtALCVZj8lFVecAXZtJfV5lNZbh/9x2RnP6Yu6iSuLH/dpRwXm/wwsDh2lNNfENKipGxgfIw==
 
 javascript-natural-sort@0.7.1:
   version "0.7.1"
