@@ -1568,19 +1568,19 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^10.21.1":
-  version "10.28.2"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.28.2.tgz#8f047ae8e20c378e7b28edf0d5313ae213fdb2eb"
-  integrity sha512-J8fyV5GuIekcjR70At/93jwjVpzPPI7ij7xeBnoKyv73I8lTcYsaxh1V60pH5dx0yYn6oHEEntJHs6BvQbneOw==
+  version "10.29.0"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.29.0.tgz#d45d5c6f5271ca41179c0286c2fce604d0cb3b24"
+  integrity sha512-2a5+xJarQaQNnmMHP73LdShNPFoXwQhUBKEK7zs/Fqy75kYKtwkBnbPPef4nJpAdG3JW0kbm8vbZcQ8T91oG1A==
 
 "@trpc/react-query@^10.21.1":
-  version "10.28.2"
-  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.28.2.tgz#fc76b3509a70e608a3c8d15b34b933f1c11cac3e"
-  integrity sha512-hDIk1MKkH5Kz1WXqbPGYJCB5jnjnIQgl0Zg4bScq6/PETBK38fZRn9MHmyjf8HLbvkXbdzWSfnhBGf/nkCCGrQ==
+  version "10.29.0"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.29.0.tgz#a1c00e850287783224336e37322ca7cff3b3f192"
+  integrity sha512-VwzPf8PX8aUexPVgS7KJd2f4jsQXCxz9E60Zn55UpCRe5nwmVK5jQfJAcMbHyPDmC+3D5lzM7+iQoIkw+mMcmA==
 
 "@trpc/server@^10.20.0":
-  version "10.28.2"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.28.2.tgz#2f3bc069ff74f025420d733a046c2ddd2966f3bc"
-  integrity sha512-mCdMzef1NnchYyV11Dg02vu8HDyXl0elvrs2Noi261eLRIU5TwQjiSRxbw/YrDupOKKjaG4iz2i8mHR7jhlvWQ==
+  version "10.29.0"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.29.0.tgz#69750aa3cc54f1fd841706fdf8cf443471701308"
+  integrity sha512-a/ZAc/TT6Cz0L/Ii4asJrgyclnNl/SiNeN+dZPVYJZlw7okeTdbHI1vePcQb/3+0GpwVQeSEkZpVpSgekH9YZQ==
 
 "@types/itty-router-extras@^0.4.0":
   version "0.4.0"
