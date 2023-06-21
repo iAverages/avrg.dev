@@ -3585,27 +3585,6 @@ mimic-response@^3.1.0:
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz#2d1d59af9c1b129815accc2c46a022a5ce1fa3c9"
   integrity sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==
 
-miniflare@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.0.0.tgz#725aafbad6a7cd0411079df7a42437e3fcd57aca"
-  integrity sha512-CW8yS00pQCbq2o4K8drePzJBkE0heL9cCY/O8DcYJOHd4M0RVutjrp+LqUP4hfzweZ+LqrLo8+Rzy4cORisQoQ==
-  dependencies:
-    acorn "^8.8.0"
-    acorn-walk "^8.2.0"
-    better-sqlite3 "^8.1.0"
-    capnp-ts "^0.7.0"
-    exit-hook "^2.2.1"
-    glob-to-regexp "^0.4.1"
-    http-cache-semantics "^4.1.0"
-    kleur "^4.1.5"
-    source-map-support "0.5.21"
-    stoppable "^1.1.0"
-    undici "^5.13.0"
-    workerd "^1.20230512.0"
-    ws "^8.11.0"
-    youch "^3.2.2"
-    zod "^3.20.6"
-
 miniflare@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.0.1.tgz#75ad9d859485de5fac065e2ddf296f83dcbf9789"
@@ -4790,7 +4769,7 @@ wouter@^2.10.1:
   dependencies:
     use-sync-external-store "^1.0.0"
 
-wrangler@3.1.1:
+wrangler@3.1.1, wrangler@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.1.1.tgz#ee9f003cddb3500b81822291bf2e1bb0ca8df653"
   integrity sha512-iG6QGOt+qgSm7UroJ8IJ+JdXEcDcW7yp9ilP0V7alCGhKm8shqa/M1iyMOpukZSCSZo8Vmn5nH2C9OY1PR3dQQ==
@@ -4802,26 +4781,6 @@ wrangler@3.1.1:
     chokidar "^3.5.3"
     esbuild "0.16.3"
     miniflare "^3.0.1"
-    nanoid "^3.3.3"
-    path-to-regexp "^6.2.0"
-    selfsigned "^2.0.1"
-    source-map "^0.7.4"
-    xxhash-wasm "^1.0.1"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-wrangler@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.1.0.tgz#7de104a975d604573d584ee9da6fc1b2ccab6466"
-  integrity sha512-oqVBJZoOQqSKxhgaPt4LcmtBf0FssIz/4F1VgjWOomeGQ3kN9pg3swPO0Zkf0aAphDodG9rekjrtccvKW7bSsA==
-  dependencies:
-    "@cloudflare/kv-asset-handler" "^0.2.0"
-    "@esbuild-plugins/node-globals-polyfill" "^0.1.1"
-    "@esbuild-plugins/node-modules-polyfill" "^0.1.4"
-    blake3-wasm "^2.1.5"
-    chokidar "^3.5.3"
-    esbuild "0.16.3"
-    miniflare "^3.0.0"
     nanoid "^3.3.3"
     path-to-regexp "^6.2.0"
     selfsigned "^2.0.1"
