@@ -24,7 +24,7 @@ export default async (request: IRequest, env: Env, ctx: ExecutionContext) => {
     const cache = caches.default;
     let response = await cache.match(request as any as Request);
     if (!response) {
-        response = await retry(3, 500, async () => {
+        response = await retry(10, 500, async () => {
             const res = await fetch(`${env.B2URL}/file/${env.B2BUCKET}/${env.PATH_PREFIX}${url.pathname}`);
             if (res.status === 404) {
                 throw new Error("404");
