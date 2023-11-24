@@ -1857,9 +1857,9 @@
   integrity sha512-ObMzyEALXhQ7QTVQdSJ+IL1wYB7UdLLoIhqHraYzqKb9sTTsL3+U64kK084KPsRd4b8R3yH/bzBOnCn8Hbrxkw==
 
 "@types/itty-router-extras@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@types/itty-router-extras/-/itty-router-extras-0.4.0.tgz#d3909f7c9c63d82ede082603d52715bea8e4dde2"
-  integrity sha512-IcXmXB8vVbjWy4McZjKzo+3sdQyzMpyHi5mQ4iViu6yX9cS/SVlGR+6H/AgzfG32svaQJeOhl2gfXYwf1AKEgg==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@types/itty-router-extras/-/itty-router-extras-0.4.3.tgz#3165a2bb5be36a44b4bfad4c3553e966e2927f0b"
+  integrity sha512-mBLJnci8IQRqWCURrBW45XVtXtwuTig0DWKBZQlLB36yOZoxkNDf8pSsHW/gOFqyqtO21zcSfgTjrA6/bKJwEA==
   dependencies:
     itty-router "^2.3.10"
 
