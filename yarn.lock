@@ -1842,24 +1842,24 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^10.21.1":
-  version "10.33.1"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.33.1.tgz#7c46f35ca1851f6aaa1e9d8111d505c14e1d4e21"
-  integrity sha512-j1YKBl/VtjCK3nUQFacsouGpsk/DFVNiekp4sZf8Lryb6f1OIChlLJZNEipl+DUuHxsPVuaCQis4PGkrIb2ieg==
+  version "10.44.1"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.44.1.tgz#5666f5b81566d2e44802706581d9e6f2b591502e"
+  integrity sha512-vTWsykNcgz1LnwePVl2fKZnhvzP9N3GaaLYPkfGINo314ZOS0OBqe9x0ytB2LLUnRVTAAZ2WoONzARd8nHiqrA==
 
 "@trpc/react-query@^10.21.1":
-  version "10.33.1"
-  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.33.1.tgz#b26b175903d67690f19507b5e2e718b1ef65acc4"
-  integrity sha512-Jpdg9xOyVJ4k+0wg28CxEEU1KcUVP+nMzpPbhISWOKaP1WZTGaQxphsCwx8KEFVaRiutKGBxhC24D+WhX7tMpA==
+  version "10.44.1"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.44.1.tgz#917122d551ff38f735fec83323ba7e45c0ebbe79"
+  integrity sha512-Sgi/v0YtdunOXjBRi7om9gILGkOCFYXPzn5KqLuEHiZw5dr5w4qGHFwCeMAvndZxmwfblJrl1tk2AznmsVu8MA==
 
 "@trpc/server@^10.20.0":
-  version "10.33.1"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.33.1.tgz#2659921208c9222cde71e9ab0f366439551a1546"
-  integrity sha512-ObMzyEALXhQ7QTVQdSJ+IL1wYB7UdLLoIhqHraYzqKb9sTTsL3+U64kK084KPsRd4b8R3yH/bzBOnCn8Hbrxkw==
+  version "10.44.1"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.44.1.tgz#0d089a3cd5d1268aa8f6845a183329fcac7f2fac"
+  integrity sha512-mF7B+K6LjuboX8I1RZgKE5GA/fJhsJ8tKGK2UBt3Bwik7hepEPb4NJgNr7vO6BK5IYwPdBLRLTctRw6XZx0sRg==
 
 "@types/itty-router-extras@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@types/itty-router-extras/-/itty-router-extras-0.4.0.tgz#d3909f7c9c63d82ede082603d52715bea8e4dde2"
-  integrity sha512-IcXmXB8vVbjWy4McZjKzo+3sdQyzMpyHi5mQ4iViu6yX9cS/SVlGR+6H/AgzfG32svaQJeOhl2gfXYwf1AKEgg==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@types/itty-router-extras/-/itty-router-extras-0.4.3.tgz#3165a2bb5be36a44b4bfad4c3553e966e2927f0b"
+  integrity sha512-mBLJnci8IQRqWCURrBW45XVtXtwuTig0DWKBZQlLB36yOZoxkNDf8pSsHW/gOFqyqtO21zcSfgTjrA6/bKJwEA==
   dependencies:
     itty-router "^2.3.10"
 
