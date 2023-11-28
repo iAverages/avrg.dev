@@ -17,7 +17,7 @@
         "cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
         "itty-router": "^4.0.0",
         "itty-router-extras": "^0.4.2",
-        "nanoid": "^4.0.0",
+        "nanoid": "^5.0.0",
         "zod": "^3.19.1"
     }
 }
