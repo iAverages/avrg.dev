@@ -41,7 +41,7 @@
         "@trpc/client": "^10.21.1",
         "@trpc/react-query": "^10.21.1",
         "class-variance-authority": "^0.7.0",
-        "clsx": "^1.2.1",
+        "clsx": "^2.0.0",
         "cmdk": "^0.2.0",
         "date-fns": "^2.29.3",
         "lucide-react": "^0.293.0",
