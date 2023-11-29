@@ -13,7 +13,7 @@
         "@ianvs/prettier-plugin-sort-imports": "^4.0.0",
         "eslint": "^8.0.0",
         "eslint-config-custom": "*",
-        "prettier": "^2.8.7",
+        "prettier": "^3.0.0",
         "turbo": "latest"
     },
     "name": "avrg.dev",
