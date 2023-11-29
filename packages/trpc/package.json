@@ -11,7 +11,7 @@
         "itty-router-extras": "^0.4.2",
         "jose": "^5.0.0",
         "nanoid": "^5.0.0",
-        "superjson": "^1.12.3"
+        "superjson": "^2.0.0"
     },
     "devDependencies": {
         "@cloudflare/workers-types": "^4.20230511.0",
