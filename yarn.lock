@@ -4569,32 +4569,10 @@ wouter@^2.10.1:
   dependencies:
     use-sync-external-store "^1.0.0"
 
-wrangler@3.22.1:
+wrangler@3.22.1, wrangler@^3.0.0:
   version "3.22.1"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.22.1.tgz#402c77db861a3d90d5755129bd45d6fd618199b8"
   integrity sha512-fN7WOF6Ono/TV5V90PuJQNf0azS7B+5C/N/KRjqhlAIQBz+c0yLOGkF6kC/akxjr1yIAC9AzcPk9+OuTSq0C+g==
-  dependencies:
-    "@cloudflare/kv-asset-handler" "^0.2.0"
-    "@cspotcode/source-map-support" "0.8.1"
-    "@esbuild-plugins/node-globals-polyfill" "^0.2.3"
-    "@esbuild-plugins/node-modules-polyfill" "^0.2.2"
-    blake3-wasm "^2.1.5"
-    chokidar "^3.5.3"
-    esbuild "0.17.19"
-    miniflare "3.20231030.4"
-    nanoid "^3.3.3"
-    path-to-regexp "^6.2.0"
-    resolve.exports "^2.0.2"
-    selfsigned "^2.0.1"
-    source-map "0.6.1"
-    xxhash-wasm "^1.0.1"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-wrangler@^3.0.0:
-  version "3.22.0"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.22.0.tgz#1f79f4005bc05917fbe798a7f40a77c8e98cfc17"
-  integrity sha512-P+HJ2iXsPIVb2uXvfG1HubFVz+GowXfTZv+vTuNWZq7xRgJroB9JSZIM6rZIrtq2rC+I8UxxbBEvwldLVw8+FA==
   dependencies:
     "@cloudflare/kv-asset-handler" "^0.2.0"
     "@cspotcode/source-map-support" "0.8.1"
