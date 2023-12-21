@@ -1,10 +1,9 @@
 import { Fragment, ReactNode, Suspense, lazy } from "react";
-// import Loading from "./components/Loading";
-import { Route } from "wouter";
+import { Route, Switch } from "wouter";
 
-const Loading = () => <div>Loading...</div>;
+import { Loader } from "@/components/loader";
 
-const PRESERVED = import.meta.globEager("./pages/(_app|404).tsx");
+const PRESERVED = import.meta.glob("./pages/(_app|404).tsx", { eager: true });
 const ROUTES = import.meta.glob("./pages/**/[A-Za-z[]*.tsx");
 
 const preserved: Partial<Record<"_app" | "404", React.FC>> = Object.keys(PRESERVED).reduce((pres, file) => {
@@ -27,16 +26,16 @@ const Router = () => {
     const App: React.FC<{ children: ReactNode | ReactNode[] }> = preserved?.["_app"] || Fragment;
     const NotFound: React.FC = preserved?.["404"] || Fragment;
 
-    console.log(preserved);
-
     return (
         <App>
-            <Suspense fallback={<Loading />}>
-                {routes.map(({ path, component: ChildComponent = Fragment }) => (
-                    <Route key={path} path={path} component={() => <ChildComponent />} />
-                ))}
+            <Suspense fallback={<Loader />}>
+                <Switch>
+                    {routes.map(({ path, component: ChildComponent = Fragment }) => (
+                        <Route key={path} path={path} component={() => <ChildComponent />} />
+                    ))}
 
-                <Route path="*" component={() => <NotFound />} />
+                    <Route component={() => <NotFound />} />
+                </Switch>
             </Suspense>
         </App>
     );

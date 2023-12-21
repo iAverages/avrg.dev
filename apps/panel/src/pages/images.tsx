@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { Loader } from "@/components/loader";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { api } from "@/utils/api";
@@ -16,7 +17,7 @@ const Images = () => {
         { path: prefix ?? "", limit: 10 },
         {
             getNextPageParam: (lastPage) => lastPage.nextFileName,
-        }
+        },
     );
 
     return (
@@ -39,6 +40,9 @@ const Images = () => {
                         </>
                     ))}
             </div>
+
+            {!data && <Loader />}
+
             {data?.pages.map((page) => {
                 return (
                     <div
