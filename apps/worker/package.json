@@ -8,7 +8,7 @@
     },
     "private": true,
     "scripts": {
-        "dev": "wrangler dev --remote",
+        "dev": "wrangler dev",
         "deploy": "wrangler publish"
     },
     "dependencies": {
