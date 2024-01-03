@@ -3326,9 +3326,9 @@ itty-router@^2.3.10:
   integrity sha512-hIPHtXGymCX7Lzb2I4G6JgZFE4QEEQwst9GORK7sMYUpJvLfy4yZJr95r04e8DzoAnj6HcxM2m4TbK+juu+18g==
 
 itty-router@^4.0.0:
-  version "4.0.25"
-  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-4.0.25.tgz#b47a9521b5075c340e88ab3e7d7d5ff0a5ea86d0"
-  integrity sha512-WbH1x46QFKNAjp85GYZzDteriZl9nJ0flwGJDVfzC4HT0B/nb01/KOD7mEr+5cYmuqy9T7L/A3ifNzCpzQ1fcw==
+  version "4.0.26"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-4.0.26.tgz#8fd29b7070d9faf0857ca5bd097f80e304ea7fcd"
+  integrity sha512-GBcmhxQRvIQ7fuzXPlvfeQcN6O7VGhctzdG9WHIcEcaRYH4FvDpMxuSWRIAxQrIM+nxtfxK0/bR78ATvb4LC5Q==
 
 jiti@^1.19.1:
   version "1.21.0"
