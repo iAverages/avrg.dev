@@ -3511,24 +3511,6 @@ mime@^3.0.0:
   resolved "https://registry.npmjs.org/mime/-/mime-3.0.0.tgz"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-miniflare@3.20231218.1:
-  version "3.20231218.1"
-  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20231218.1.tgz#0e443c921d55d3b2b69a83f7dcae361e46a368a3"
-  integrity sha512-rl/wADgaRLpbl7EMobwbAt6BgVqkOoWsVQJAliIIUCRzC0s0xg7ZVeoV+DuQD4ffN4RySXsPnP97hp7ksc7ylA==
-  dependencies:
-    "@cspotcode/source-map-support" "0.8.1"
-    acorn "^8.8.0"
-    acorn-walk "^8.2.0"
-    capnp-ts "^0.7.0"
-    exit-hook "^2.2.1"
-    glob-to-regexp "^0.4.1"
-    stoppable "^1.1.0"
-    undici "^5.22.1"
-    workerd "1.20231218.0"
-    ws "^8.11.0"
-    youch "^3.2.2"
-    zod "^3.20.6"
-
 miniflare@3.20231218.2:
   version "3.20231218.2"
   resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20231218.2.tgz#301cbf7833b7b962e4eaaf1bf4abe2ad507f3f5e"
@@ -4617,7 +4599,7 @@ wouter@^2.10.1:
   dependencies:
     use-sync-external-store "^1.0.0"
 
-wrangler@3.22.5:
+wrangler@3.22.5, wrangler@^3.0.0:
   version "3.22.5"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.22.5.tgz#e76c5eb2e87fdb9f46a0c6e48c57713e3dae014f"
   integrity sha512-9ScB/eX5+f8OEA0BHW9+EQDXTVdusZNpAaDu/yY65kJ2ggjehRCFWebz5ZdYSeJojBj7cvwu/skDqDwFAqlDTw==
@@ -4632,28 +4614,6 @@ wrangler@3.22.5:
     nanoid "^3.3.3"
     path-to-regexp "^6.2.0"
     resolve "^1.22.8"
-    resolve.exports "^2.0.2"
-    selfsigned "^2.0.1"
-    source-map "0.6.1"
-    xxhash-wasm "^1.0.1"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-wrangler@^3.0.0:
-  version "3.22.4"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.22.4.tgz#1cd0fa079627fee8566cc8b7e1e17a6513423fbc"
-  integrity sha512-AhqraOHTcIV9rrm0z5tlxFDhx+l+O6g4QnKL08J1wnLg3mdvTWwMm5QmhxN0JQ0YgS2jgRCwg0PR+Fa5cumP8A==
-  dependencies:
-    "@cloudflare/kv-asset-handler" "^0.2.0"
-    "@cspotcode/source-map-support" "0.8.1"
-    "@esbuild-plugins/node-globals-polyfill" "^0.2.3"
-    "@esbuild-plugins/node-modules-polyfill" "^0.2.2"
-    blake3-wasm "^2.1.5"
-    chokidar "^3.5.3"
-    esbuild "0.17.19"
-    miniflare "3.20231218.1"
-    nanoid "^3.3.3"
-    path-to-regexp "^6.2.0"
     resolve.exports "^2.0.2"
     selfsigned "^2.0.1"
     source-map "0.6.1"
