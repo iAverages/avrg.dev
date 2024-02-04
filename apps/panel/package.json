@@ -51,7 +51,7 @@
         "tailwind-merge": "^2.0.0",
         "tailwindcss-animate": "^1.0.5",
         "vite-tsconfig-paths": "^4.2.0",
-        "wouter": "^2.10.1"
+        "wouter": "^3.0.0"
     },
     "devDependencies": {
         "@types/react": "^18.0.28",
