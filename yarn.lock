@@ -336,13 +336,6 @@
   dependencies:
     mime "^3.0.0"
 
-"@cloudflare/kv-asset-handler@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.2.0.tgz"
-  integrity sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==
-  dependencies:
-    mime "^3.0.0"
-
 "@cloudflare/workerd-darwin-64@1.20240129.0":
   version "1.20240129.0"
   resolved "https://registry.yarnpkg.com/@cloudflare/workerd-darwin-64/-/workerd-darwin-64-1.20240129.0.tgz#b6db9c944fcb1a49b15be646383c937ffa175978"
@@ -3532,24 +3525,6 @@ mime@^3.0.0:
   resolved "https://registry.npmjs.org/mime/-/mime-3.0.0.tgz"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-miniflare@3.20240129.1:
-  version "3.20240129.1"
-  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240129.1.tgz#2b34a01955203be1f0692b7e08a0b1e1cce8cfc8"
-  integrity sha512-GfqclPxbTnam4S8GKHRkFyr+s+szELK/ORtQ3ZFUiGBO4HNJsaeA6RhBMKBH7iHqn5ng035cyPsLZvH35lwtsA==
-  dependencies:
-    "@cspotcode/source-map-support" "0.8.1"
-    acorn "^8.8.0"
-    acorn-walk "^8.2.0"
-    capnp-ts "^0.7.0"
-    exit-hook "^2.2.1"
-    glob-to-regexp "^0.4.1"
-    stoppable "^1.1.0"
-    undici "^5.28.2"
-    workerd "1.20240129.0"
-    ws "^8.11.0"
-    youch "^3.2.2"
-    zod "^3.20.6"
-
 miniflare@3.20240129.2:
   version "3.20240129.2"
   resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240129.2.tgz#9fdfe5f4f2ade629996f2f7788a1500f765bcf67"
@@ -4655,7 +4630,7 @@ wouter@^3.0.0:
     regexparam "^3.0.0"
     use-sync-external-store "^1.0.0"
 
-wrangler@3.28.2:
+wrangler@3.28.2, wrangler@^3.0.0:
   version "3.28.2"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.28.2.tgz#32a16dc150e31e9eb3f9f8076a8a71db9c8202e4"
   integrity sha512-hlD4f2avBZuR1+qo9Um6D1prdWrSRtGTo9h6o/AKce+bHQEJWoJgJKHeLmrpZlLtHg/gGR1Xa1xzrexhuIzeJw==
@@ -4667,28 +4642,6 @@ wrangler@3.28.2:
     chokidar "^3.5.3"
     esbuild "0.17.19"
     miniflare "3.20240129.2"
-    nanoid "^3.3.3"
-    path-to-regexp "^6.2.0"
-    resolve "^1.22.8"
-    resolve.exports "^2.0.2"
-    selfsigned "^2.0.1"
-    source-map "0.6.1"
-    xxhash-wasm "^1.0.1"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-wrangler@^3.0.0:
-  version "3.28.1"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.28.1.tgz#33c4b297ffd45540d352746850ac6d8a642bfd03"
-  integrity sha512-3O8vCzd7IC71Kciu/+oDVO0VZ83ujlUuKwmCkv6/zzt4WAoYu0vk7PyEo4WvlsSbZL8aHuv3bS917rd6TM1/9Q==
-  dependencies:
-    "@cloudflare/kv-asset-handler" "^0.2.0"
-    "@esbuild-plugins/node-globals-polyfill" "^0.2.3"
-    "@esbuild-plugins/node-modules-polyfill" "^0.2.2"
-    blake3-wasm "^2.1.5"
-    chokidar "^3.5.3"
-    esbuild "0.17.19"
-    miniflare "3.20240129.1"
     nanoid "^3.3.3"
     path-to-regexp "^6.2.0"
     resolve "^1.22.8"
