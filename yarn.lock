@@ -3543,6 +3543,24 @@ miniflare@3.20240129.2:
     youch "^3.2.2"
     zod "^3.20.6"
 
+miniflare@3.20240129.3:
+  version "3.20240129.3"
+  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240129.3.tgz#cb21be53a455116240779c844e2c102082a47323"
+  integrity sha512-PCmLJ+UvtbpPj/fgNzTGbd+U5QBkt3akRNcdks9RBJU2SH+gUCp7iahsaI4GA344NX5MIbC6ctw1A6TfcA+aFA==
+  dependencies:
+    "@cspotcode/source-map-support" "0.8.1"
+    acorn "^8.8.0"
+    acorn-walk "^8.2.0"
+    capnp-ts "^0.7.0"
+    exit-hook "^2.2.1"
+    glob-to-regexp "^0.4.1"
+    stoppable "^1.1.0"
+    undici "^5.28.2"
+    workerd "1.20240129.0"
+    ws "^8.11.0"
+    youch "^3.2.2"
+    zod "^3.20.6"
+
 minimatch@9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
@@ -4630,7 +4648,29 @@ wouter@^3.0.0:
     regexparam "^3.0.0"
     use-sync-external-store "^1.0.0"
 
-wrangler@3.28.2, wrangler@^3.0.0:
+wrangler@3.28.3:
+  version "3.28.3"
+  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.28.3.tgz#0983bae2a45a1861e122ad02a2c4d690638af704"
+  integrity sha512-pLuvWA5W8FhjI/a7Mr5F491KOqNMYzyWVN7dmwr+52sPv2BFrfN1v6btmhHYotSblCH8yfs5DmuxwdKuVPMw9w==
+  dependencies:
+    "@cloudflare/kv-asset-handler" "0.3.1"
+    "@esbuild-plugins/node-globals-polyfill" "^0.2.3"
+    "@esbuild-plugins/node-modules-polyfill" "^0.2.2"
+    blake3-wasm "^2.1.5"
+    chokidar "^3.5.3"
+    esbuild "0.17.19"
+    miniflare "3.20240129.3"
+    nanoid "^3.3.3"
+    path-to-regexp "^6.2.0"
+    resolve "^1.22.8"
+    resolve.exports "^2.0.2"
+    selfsigned "^2.0.1"
+    source-map "0.6.1"
+    xxhash-wasm "^1.0.1"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
+wrangler@^3.0.0:
   version "3.28.2"
   resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.28.2.tgz#32a16dc150e31e9eb3f9f8076a8a71db9c8202e4"
   integrity sha512-hlD4f2avBZuR1+qo9Um6D1prdWrSRtGTo9h6o/AKce+bHQEJWoJgJKHeLmrpZlLtHg/gGR1Xa1xzrexhuIzeJw==
