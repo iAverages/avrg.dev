@@ -4627,9 +4627,9 @@ workerd@1.20240223.1:
     "@cloudflare/workerd-windows-64" "1.20240223.1"
 
 wouter@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/wouter/-/wouter-3.0.1.tgz#8fcceadb86600d1454220efdabe80fa323fa0c34"
-  integrity sha512-Wv2FSH56LchrKKoiGXn2F8ZA9gLgKiI3JVtI64DhZXXOtbgV/pFKSyMZ5ds94LoKxkGAyNEKK0LAnTMR0LMp3g==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/wouter/-/wouter-3.0.2.tgz#10f8d922608e96152b8e08c23c3a9218b86c61c6"
+  integrity sha512-T/rhpHjAnrJ0D056rJkezqCyKZ9NyTpdL4w43ja3l0nR+vDNnyLhtHe+7delBj0COzig6EdlB9XQbyjmyDm4gw==
   dependencies:
     mitt "^3.0.1"
     regexparam "^3.0.0"
