@@ -17,7 +17,7 @@
         "turbo": "latest"
     },
     "name": "avrg.dev",
-    "packageManager": "yarn@1.22.21",
+    "packageManager": "yarn@1.22.22",
     "workspaces": [
         "apps/*",
         "packages/*"
