@@ -3359,10 +3359,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-react@^0.353.0:
-  version "0.353.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.353.0.tgz#a3501a0fdf7239897b2100feff8591e49c283fb1"
-  integrity sha512-Cgo3pysxtXS3xTfL3H725H6u8MhTFdA4lpUeEKzaX77zF1TmuzAkU1+f4zTV4u2HY5Sae/M1GDpoL6LoUuRb9A==
+lucide-react@^0.354.0:
+  version "0.354.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.354.0.tgz#c5c9d9d1d98cf9e586154f5c4e77777a8b42169f"
+  integrity sha512-qI0x/hhcuHieaUUxFejesm5T/ditszQ2x1gUkqKnTMZRAOdxT2nGzbOFYrhc0wRjuA2MN1o5JCrcRPYcHH3l8A==
 
 magic-string@^0.25.3:
   version "0.25.9"
