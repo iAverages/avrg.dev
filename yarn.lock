@@ -3241,9 +3241,9 @@ isexe@^2.0.0:
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
 itty-router-extras@^0.4.2:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/itty-router-extras/-/itty-router-extras-0.4.5.tgz#9f3fec9da1fe7e04a6a101e7741fd587967b277d"
-  integrity sha512-flxFhFZgPqiscrHTV3mBbRBk8plgOGdg5tZMyv7hE629PO+XEfXh2uHs78ndH6axRG50fIHfjrrqAlb3Pguemw==
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/itty-router-extras/-/itty-router-extras-0.4.6.tgz#dafaa23ead46180197b7a97c2f766d30d2fe2e94"
+  integrity sha512-6r7HQBkFMPSJfcKksrKC7avEQnPCSSEvoz6PAAZMNhz8hthYu1pzedXDrvTFDWXJosfuaittzoNciWHO/TxMaw==
 
 itty-router@^2.3.10:
   version "2.6.6"
