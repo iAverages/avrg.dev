@@ -1,5 +1,10 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base"],
-    "automerge":  false 
+    "extends": [
+        "config:recommended",
+        "group:allNonMajor",
+        "schedule:weekly",
+        ":automergeMinor",
+        ":disablePeerDependencies"
+    ]
 }
