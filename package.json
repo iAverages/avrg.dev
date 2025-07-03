@@ -1,25 +1,14 @@
 {
-    "private": true,
-    "scripts": {
-        "build": "turbo run build",
-        "dev": "turbo run dev",
-        "lint": "turbo run lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "panel": "yarn workspace @avrg.dev/panel",
-        "worker": "yarn workspace @avrg.dev/worker",
-        "trpc": "yarn workspace @avrg.dev/trpc"
-    },
-    "devDependencies": {
-        "@ianvs/prettier-plugin-sort-imports": "^4.0.0",
-        "eslint": "^8.0.0",
-        "eslint-config-custom": "*",
-        "prettier": "^3.0.0",
-        "turbo": "latest"
-    },
-    "name": "avrg.dev",
-    "packageManager": "yarn@1.22.22",
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ]
+	"name": "avrg-dev",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+	},
+	"dependencies": {
+		"hono": "^4.8.3"
+	},
+	"devDependencies": {
+		"wrangler": "^4.23.0"
+	}
 }
