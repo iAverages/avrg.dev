@@ -18,7 +18,10 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run linting
+      - name: install dependencies
+        run: nix develop --command pnpm install
+
+      - name: run linting
         run: nix develop --command pnpm check
 
   deploy:
@@ -33,6 +36,9 @@ jobs:
         uses: cachix/install-nix-action@v24
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: install dependencies
+        run: nix develop --command pnpm install
 
       - name: deploy to cloudflare
         run: nix develop --command pnpm deploy
