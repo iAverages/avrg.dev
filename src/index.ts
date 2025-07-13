@@ -1,6 +1,7 @@
 import { BackblazeB2 } from "cloudflare-b2/src";
 import { Hono } from "hono";
 import { basicAuth } from "hono/basic-auth";
+import { proxy } from "hono/proxy";
 import { formatHeaders, retry } from "./utils";
 
 const app = new Hono<{ Bindings: CloudflareBindings }>();
@@ -19,7 +20,7 @@ app.get("/:url", async (c) => {
 				20,
 				500,
 				async () => {
-					const res = await fetch(
+					const res = await proxy(
 						`${c.env.B2_URL}/${c.env.B2_BUCKET}/${c.env.PATH_PREFIX}/${url}`,
 					);
 					if (res.status !== 200) {
