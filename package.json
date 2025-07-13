@@ -3,7 +3,8 @@
 	"scripts": {
 		"dev": "wrangler dev",
 		"deploy": "wrangler deploy --minify",
-		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
+		"check": "biome ci"
 	},
 	"dependencies": {
 		"cloudflare-b2": "https://github.com/iAverages/cf-b2.git",
