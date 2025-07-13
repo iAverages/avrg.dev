@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!src/routeTree.gen.ts", "!.direnv"]
+		"includes": ["**", "!worker-configuration.d.ts", "!.direnv"]
 	},
 	"formatter": {
 		"enabled": true,
