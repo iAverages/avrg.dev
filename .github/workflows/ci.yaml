@@ -22,7 +22,7 @@ jobs:
         run: nix develop --command pnpm install
 
       - name: run linting
-        run: nix develop --command pnpm check
+        run: nix develop --command pnpm run check
 
   deploy:
     runs-on: ubuntu-latest
@@ -41,6 +41,6 @@ jobs:
         run: nix develop --command pnpm install
 
       - name: deploy to cloudflare
-        run: nix develop --command pnpm deploy
+        run: nix develop --command pnpm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
