@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      cloudflare-b2:
+        specifier: https://github.com/iAverages/cf-b2.git
+        version: https://codeload.github.com/iAverages/cf-b2/tar.gz/0d73777a796c4f500b643f93d7df96dd82b08ab5
       hono:
         specifier: ^4.8.3
         version: 4.8.3
@@ -408,6 +411,10 @@ packages:
   blake3-wasm@2.1.5:
     resolution: {integrity: sha512-F1+K8EbfOZE49dtoPtmxUQrpXaBIl3ICvasLh+nJta0xkz+9kF/7uet9fLnwKqhDrmj6g+6K3Tw9yQPUg2ka5g==}
 
+  cloudflare-b2@https://codeload.github.com/iAverages/cf-b2/tar.gz/0d73777a796c4f500b643f93d7df96dd82b08ab5:
+    resolution: {tarball: https://codeload.github.com/iAverages/cf-b2/tar.gz/0d73777a796c4f500b643f93d7df96dd82b08ab5}
+    version: 0.0.0
+
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -802,6 +809,8 @@ snapshots:
       printable-characters: 1.0.42
 
   blake3-wasm@2.1.5: {}
+
+  cloudflare-b2@https://codeload.github.com/iAverages/cf-b2/tar.gz/0d73777a796c4f500b643f93d7df96dd82b08ab5: {}
 
   color-convert@2.0.1:
     dependencies:
