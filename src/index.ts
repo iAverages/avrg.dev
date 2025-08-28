@@ -61,6 +61,8 @@ app.get("/:url", async (c) => {
 	return response;
 });
 
+app.get("/", (c) => c.redirect("https://danielraybone.com"));
+
 app
 	// need to access context for env variables
 	.use("*", async (c, next) =>
