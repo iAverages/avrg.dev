@@ -91,7 +91,9 @@ app
 		// i do this here instead of waiting for the upload to complete
 		// so i get the link faster and can post it places sooner
 		c.executionCtx.waitUntil(
-			b2.uploadFile(file, `${c.env.PATH_PREFIX}/${file.name}`).catch((e) => {
+			retry(50, 1000, () =>
+				b2!.uploadFile(file, `${c.env.PATH_PREFIX}/${file.name}`),
+			).catch((e) => {
 				console.error("upload failed:", e);
 			}),
 		);
