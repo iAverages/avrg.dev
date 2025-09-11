@@ -88,15 +88,24 @@ app
 			return c.json({ message: "no file uploaded" }, { status: 400 });
 		}
 
-		// i do this here instead of waiting for the upload to complete
-		// so i get the link faster and can post it places sooner
-		c.executionCtx.waitUntil(
-			retry(50, 1000, () =>
+		const wait = c.req.query("wait") === "true";
+		if (wait) {
+			await retry(40, 200, () =>
 				b2!.uploadFile(file, `${c.env.PATH_PREFIX}/${file.name}`),
 			).catch((e) => {
 				console.error("upload failed:", e);
-			}),
-		);
+			});
+		} else {
+			// i do this here instead of waiting for the upload to complete
+			// so i get the link faster and can post it places sooner
+			c.executionCtx.waitUntil(
+				retry(40, 200, () =>
+					b2!.uploadFile(file, `${c.env.PATH_PREFIX}/${file.name}`),
+				).catch((e) => {
+					console.error("upload failed:", e);
+				}),
+			);
+		}
 
 		const url = new URL(c.req.url);
 		const domain = url.hostname;
