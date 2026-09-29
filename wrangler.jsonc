@@ -3,18 +3,18 @@
  * https://developers.cloudflare.com/workers/wrangler/configuration/
  */
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "avrg-dev",
-    "main": "src/index.ts",
-    "compatibility_date": "2025-07-03",
-    "observability": {
-        "enabled": true,
-        "logs": {
-            "enabled": true,
-            "invocation_logs": true
-        },
-        "traces": {
-            "enabled": false
-        }
-    }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "avrg-dev",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-03",
+	"observability": {
+		"enabled": true,
+		"logs": {
+			"enabled": true,
+			"invocation_logs": true
+		},
+		"traces": {
+			"enabled": false
+		}
+	}
 }
