@@ -1,0 +1,18 @@
+name = "avrg-dev"
+main = "build/index.js"
+compatibility_date = "2026-10-27"
+
+[observability]
+enabled = true
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "dancdn" 
+
+[[previews.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "dancdn" 
+
+[build]
+command = "worker-build --release --panic-unwind"
+

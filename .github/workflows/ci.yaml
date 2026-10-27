@@ -1,4 +1,4 @@
-name: Lint and Deploy
+name: Check and Deploy
 
 on:
   push:
@@ -6,41 +6,41 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v6
-
-      - name: install nix
-        uses: cachix/install-nix-action@v31
+      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: Mic92/niks3-action@v1
+        continue-on-error: true
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          server-url: https://niks3.kirsi.dev
+          skip-push: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: install dependencies
-        run: nix develop --command pnpm install
-
-      - name: run linting
-        run: nix develop --command pnpm run check
+      - name: run checks
+        run: nix flake check --print-build-logs --fallback
 
   deploy:
     runs-on: ubuntu-latest
-    needs: lint
+    needs: check
     if: github.ref == 'refs/heads/main'
-    
+
     steps:
       - uses: actions/checkout@v6
-
-      - name: install nix
-        uses: cachix/install-nix-action@v31
+      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: Mic92/niks3-action@v1
+        continue-on-error: true
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: install dependencies
-        run: nix develop --command pnpm install
+          server-url: https://niks3.kirsi.dev
+          skip-push: true
 
       - name: deploy to cloudflare
-        run: nix develop --command pnpm run deploy
+        run: nix develop --command wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
