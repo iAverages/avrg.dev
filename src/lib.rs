@@ -71,12 +71,18 @@ async fn get_image(req: &Request, name: &str, env: &Env, ctx: &Context) -> Resul
 }
 
 fn r2_response(obj: Object) -> Result<Response> {
-    let content_type = obj.http_metadata().content_type;
+    let content_type = content_type(&obj.key(), obj.http_metadata().content_type);
     let body = obj.body().ok_or("r2 object has no body")?.response_body()?;
     let mut res = Response::from_body(body)?;
-    res.headers_mut()
-        .set("content-type", content_type.as_deref().unwrap_or("application/octet-stream"))?;
+    res.headers_mut().set("content-type", &content_type)?;
     Ok(res)
+}
+
+fn content_type(name: &str, given: Option<String>) -> String {
+    match given {
+        Some(t) if !t.is_empty() && t != "application/octet-stream" => t,
+        _ => mime_guess::from_path(name).first_or_octet_stream().to_string(),
+    }
 }
 
 async fn fetch_b2(url: Url) -> Option<Response> {
@@ -126,7 +132,7 @@ async fn upload(req: &mut Request, env: &Env, ctx: &Context) -> Result<Response>
     let bytes = file.bytes().await?;
     let job = async move {
         let metadata = HttpMetadata {
-            content_type: Some(file.type_()),
+            content_type: Some(content_type(&file.name(), Some(file.type_()))),
             ..Default::default()
         };
         if let Err(e) = bucket.put(file.name(), bytes).http_metadata(metadata).execute().await {
