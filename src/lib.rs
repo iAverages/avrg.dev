@@ -59,7 +59,8 @@ async fn get_image(req: &Request, name: &str, env: &Env, ctx: &Context) -> Resul
         return Response::error("no image found", 404);
     };
 
-    res.headers_mut().set("cache-control", "public, max-age=86400")?;
+    res.headers_mut()
+        .set("cache-control", "public, max-age=86400")?;
     let copy = res.cloned()?;
     let key = req.url()?.to_string();
     ctx.wait_until(async move {
@@ -81,7 +82,9 @@ fn r2_response(obj: Object) -> Result<Response> {
 fn content_type(name: &str, given: Option<String>) -> String {
     match given {
         Some(t) if !t.is_empty() && t != "application/octet-stream" => t,
-        _ => mime_guess::from_path(name).first_or_octet_stream().to_string(),
+        _ => mime_guess::from_path(name)
+            .first_or_octet_stream()
+            .to_string(),
     }
 }
 
@@ -114,7 +117,11 @@ async fn fetch_b2(url: Url) -> Option<Response> {
 async fn upload(req: &mut Request, env: &Env, ctx: &Context) -> Result<Response> {
     let expected = format!(
         "Basic {}",
-        BASE64_STANDARD.encode(format!("{}:{}", var(env, "AUTH_USER")?, var(env, "AUTH_PASS")?))
+        BASE64_STANDARD.encode(format!(
+            "{}:{}",
+            var(env, "AUTH_USER")?,
+            var(env, "AUTH_PASS")?
+        ))
     );
     let auth_header = req.headers().get("authorization")?.unwrap_or_default();
     if !bool::from(auth_header.as_bytes().ct_eq(expected.as_bytes())) {
@@ -123,10 +130,17 @@ async fn upload(req: &mut Request, env: &Env, ctx: &Context) -> Result<Response>
     }
 
     let Some(FormEntry::File(file)) = req.form_data().await?.get("file") else {
-        return Ok(Response::from_json(&json!({ "message": "no file uploaded" }))?.with_status(400));
+        return Ok(
+            Response::from_json(&json!({ "message": "no file uploaded" }))?.with_status(400),
+        );
     };
     let url = req.url()?;
-    let link = format!("{}://{}/{}", url.scheme(), url.host_str().unwrap_or_default(), file.name());
+    let link = format!(
+        "{}://{}/{}",
+        url.scheme(),
+        url.host_str().unwrap_or_default(),
+        file.name()
+    );
 
     let bucket = env.bucket("BUCKET")?;
     let bytes = file.bytes().await?;
@@ -135,7 +149,12 @@ async fn upload(req: &mut Request, env: &Env, ctx: &Context) -> Result<Response>
             content_type: Some(content_type(&file.name(), Some(file.type_()))),
             ..Default::default()
         };
-        if let Err(e) = bucket.put(file.name(), bytes).http_metadata(metadata).execute().await {
+        if let Err(e) = bucket
+            .put(file.name(), bytes)
+            .http_metadata(metadata)
+            .execute()
+            .await
+        {
             console_error!("upload failed: {e}");
         }
     };
