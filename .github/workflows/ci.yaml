@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: DeterminateSystems/nix-installer-action@v23
       - uses: Mic92/niks3-action@v1
         continue-on-error: true
         with:
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: DeterminateSystems/nix-installer-action@v23
       - uses: Mic92/niks3-action@v1
         continue-on-error: true
         with:
